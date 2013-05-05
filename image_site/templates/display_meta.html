@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<body>
+<head>
+    <title>Here are meta data</title>
+</head>
+<table>
+    {% for k, v in values %}
+        <tr>
+            <td>{{ k }}</td>
+            <td>{{ v }}</td>
+        </tr>
+    {% empty %}
+        <li>Empty!</li>
+    {% endfor %}
+</table>
+</body>
+</html>
