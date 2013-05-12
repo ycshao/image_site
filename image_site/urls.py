@@ -1,5 +1,7 @@
 from django.conf.urls import patterns, include, url
 from image_site.views import hello, home, current_datetime, hours_ahead, display_meta
+from image_site.books.views import search
+from image_site.contact.views import contact
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -11,6 +13,8 @@ urlpatterns = patterns('',
     url(r'^time/$', current_datetime),
     url(r'^time/plus/(\d{1,2})/$', hours_ahead),
     url(r'^meta/$', display_meta),
+    url(r'^search/$', search),
+    url(r'^contact/$', contact),
     # Examples:
     # url(r'^$', 'image_site.views.home', name='home'),
     # url(r'^image_site/', include('image_site.foo.urls')),
